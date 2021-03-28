@@ -12,4 +12,21 @@ class DaftarController extends Controller
             'siswas' => Siswa::get()
         ]);
     }
+
+    public function store()
+    {
+        $attr = $this->validate(request(),[
+            'nis' => 'required|unique:siswas,nis',
+            'nama' => 'required',
+            'alamat' => 'required',
+            'jk' => 'required',
+            'tempat_lahir' => 'required',
+            'tgl_lahir' => 'required',
+            'asal_sekolah' => 'required',
+            'kelas' => 'required',
+            'jurusan' => 'required'
+        ]);
+        Siswa::create($attr);
+        return back();
+    }
 }

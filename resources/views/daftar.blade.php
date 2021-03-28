@@ -26,7 +26,8 @@
                                 <img src="{{ asset('landing/assets/img/logowk.png') }}" width="50" alt="logoWeb" srcset="">
                             </div>
                         </div>
-                        <form action="" method="post">
+                        <form action="{{ route('siswa.store') }}" method="post">
+                            @csrf
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6">
@@ -121,7 +122,7 @@
                                     <tbody>
                                         @foreach ($siswas as $siswa)
                                             <tr>
-                                                <td><a href="" class="btn btn-info btn-sm">Pdf</a></td>
+                                                <td><a href="" id="swal" class="btn btn-info btn-sm">Pdf</a></td>
                                                 <td>{{ $siswa->nis }}</td>
                                                 <td>{{ $siswa->nama }}</td>
                                                 <td>{{ $siswa->GenderDefinition }}</td>
@@ -133,6 +134,16 @@
                                             </tr>
                                         @endforeach
                                     </tbody>
+                                    <script>
+                                        const swal = document.querySelector('#swal');
+                                        swal.addEventListener('click', function(){
+                                            Swal.fire(
+                                                'The Internet?',
+                                                'That thing is still around?',
+                                                'question'
+                                            )
+                                        });
+                                    </script>
                                 </table>
                             </div>
                         </div>
