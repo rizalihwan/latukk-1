@@ -17,78 +17,84 @@
             <div class="row">
                 <div class="col-md-5">
                     <div class="card my-3">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="nis">*NIS</label>
-                                        <input type="number" name="nis" id="nis" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="nama">*Nama</label>
-                                        <input type="text" name="nama" id="nama" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="alamat">*Alamat</label>
-                                        <textarea name="alamat" id="alamat" class="form-control" required></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="jk">*Jenis Kelamin</label>
-                                        <select name="jk" id="jk" class="form-control custom-select" required>
-                                            <option disabled selected>pilih jenis kelamin</option>
-                                            <option value="0">Laki - laki</option>
-                                            <option value="1">Perempuan</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="tempat_lahir">*Tempat Lahir</label>
-                                        <input type="text" name="tempat_lahir" id="tempat_lahir" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="tgl_lahir">*Tanggal Lahir</label>
-                                        <input type="date" name="tgl_lahir" id="tgl_lahir" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="asal_sekolah">*Asal Sekolah</label>
-                                        <input type="text" name="asal_sekolah" id="asal_sekolah" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="kelas">*Kelas</label>
-                                        <input type="text" name="kelas" id="kelas" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="jurusan">*Jurusan</label>
-                                        <input type="text" name="jurusan" id="jurusan" class="form-control" required>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer d-flex justify-content-between">
-                            <div class="my-3 mx-2">
+                        <div class="card-header d-flex justify-content-between">
+                            <div class="my-2">
                                 <a href="{{ route('welcome') }}" class="btn btn-danger"><i class="fa fa-arrow-left"></i></a>
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i></button>
                             </div>
                             <div>   
                                 <small style="font-family: 'font-title';">[Daftar Peserta SMK Wikrama]</small>
                                 <img src="{{ asset('landing/assets/img/logowk.png') }}" width="50" alt="logoWeb" srcset="">
                             </div>
                         </div>
+                        <form action="" method="post">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="nis">*NIS</label>
+                                            <input type="number" name="nis" id="nis" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="nama">*Nama</label>
+                                            <input type="text" name="nama" id="nama" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="alamat">*Alamat</label>
+                                            <textarea name="alamat" id="alamat" class="form-control" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="jk">*Jenis Kelamin</label>
+                                            <select name="jk" id="jk" class="form-control custom-select" required>
+                                                <option disabled selected>pilih jenis kelamin</option>
+                                                <option value="0">Laki - laki</option>
+                                                <option value="1">Perempuan</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="tempat_lahir">*Tempat Lahir</label>
+                                            <input type="text" name="tempat_lahir" id="tempat_lahir" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="tgl_lahir">*Tanggal Lahir</label>
+                                            <input type="date" name="tgl_lahir" id="tgl_lahir" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="asal_sekolah">*Asal Sekolah</label>
+                                            <input type="text" name="asal_sekolah" id="asal_sekolah" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="kelas">*Kelas</label>
+                                            <input type="text" name="kelas" id="kelas" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="jurusan">*Jurusan</label>
+                                            <input type="text" name="jurusan" id="jurusan" class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between">
+                                <div class="my-3 mx-2">
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <div class="col-md-7">
