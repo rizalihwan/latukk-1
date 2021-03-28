@@ -13,8 +13,8 @@ class Siswa extends Model
     public $incrementing = false;
     public $guarded = [];
 
-    public function getGenderDefinitionAtribute()
+    public function getGenderDefinitionAttribute()
     {
-        $this->jk === 0 ? 'Laki - laki' : 'Perempuan';
+        return $this->jk === 0 ? 'Laki - laki' : 'Perempuan';
     }
 }
