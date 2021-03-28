@@ -107,7 +107,7 @@
                                 <table id="table" class="table table-striped table-bordered table-light" style="width:100%">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
+                                            <th>Action</th>
                                             <th>Nis</th>
                                             <th>Nama</th>
                                             <th>Jenis Kelamin</th>
@@ -121,7 +121,7 @@
                                     <tbody>
                                         @foreach ($siswas as $siswa)
                                             <tr>
-                                                <td>{{ $loop->iteration }}</td>
+                                                <td><a href="" class="btn btn-info btn-sm">Pdf</a></td>
                                                 <td>{{ $siswa->nis }}</td>
                                                 <td>{{ $siswa->nama }}</td>
                                                 <td>{{ $siswa->GenderDefinition }}</td>
