@@ -27,6 +27,7 @@
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('landing/assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('landing/assets/css/index.css') }}" rel="stylesheet">
     @stack('style')
 </head>
 
