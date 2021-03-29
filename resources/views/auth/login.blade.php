@@ -15,7 +15,11 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <center>
+                                    <img src="{{ asset('landing/assets/img/logowk.png') }}" style="margin-top: 90px;" width="200" alt="" srcset="">
+                                </center>
+                            </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
@@ -26,7 +30,7 @@
                                         <div class="form-group">
                                             <input type="email" name="email" class="form-control form-control-user @error('email') is-invalid @enderror"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Email Address...">
+                                                placeholder="Enter Email Address..." required>
                                             @error('email')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -35,7 +39,7 @@
                                         </div>
                                         <div class="form-group">
                                             <input type="password" name="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password">
+                                                id="exampleInputPassword" placeholder="Password" required>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
@@ -48,6 +52,7 @@
                                             Login
                                         </button>
                                         <hr>
+                                        <a href="{{ route('welcome') }}" class="link">Visit Landing Page</a>
                                     </form>
                                 </div>
                             </div>

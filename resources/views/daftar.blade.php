@@ -132,6 +132,7 @@
                             </div>
                             <div class="card-footer d-flex justify-content-between">
                                 <div class="my-3 mx-2">
+                                    <button type="reset" class="btn btn-secondary">Reset</button>
                                     <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save</button>
                                 </div>
                             </div>

@@ -19,7 +19,7 @@
           <li><a href="#faq">F.A.Q</a></li>
           <li><a href="#contact">Kontak</a></li>
 
-          <li class="get-started"><a href="{{ route('siswa.daftar') }}">Daftar</a></li>
+          <li class="get-started"><a href="{{ route('login') }}">Sign In</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 

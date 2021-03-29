@@ -8,7 +8,7 @@
 </head>
 <body>
     <hr>
-    <h2>Nama Siswa : {{ $siswa->nama }}</h2>
+    <h2 style="text-align: center;">Nama Siswa : {{ $siswa->nama }}</h2>
     <hr style="margin-bottom: 20px;">
     <table border="1" cellspacing="0" cellpading="5" style="width: 100%;">
         <thead>
