@@ -16,7 +16,7 @@ class DaftarController extends Controller
     public function store()
     {
         $attr = $this->validate(request(),[
-            'nis' => 'required|unique:siswas,nis',
+            'nis' => 'required|unique:siswas,nis|max:10',
             'nama' => 'required',
             'alamat' => 'required',
             'jk' => 'required',
@@ -25,8 +25,11 @@ class DaftarController extends Controller
             'asal_sekolah' => 'required',
             'kelas' => 'required',
             'jurusan' => 'required'
+        ], [
+            'nis.unique' => 'Nis sudah terdaftar!'
         ]);
         Siswa::create($attr);
+        toast('Berhasil Daftar','success');
         return back();
     }
 }
