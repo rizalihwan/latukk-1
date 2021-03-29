@@ -36,6 +36,7 @@
     @yield('content')
 
     <!-- Vendor JS Files -->
+    @include('sweetalert::alert')
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="{{ asset('landing/assets/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('landing/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

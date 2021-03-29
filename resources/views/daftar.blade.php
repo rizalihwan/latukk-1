@@ -33,7 +33,12 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="nis">*NIS</label>
-                                            <input type="number" name="nis" id="nis" class="form-control" required>
+                                            <input type="number" name="nis" id="nis" class="form-control @error('nis') is-invalid @enderror" required>
+                                            @error('nis')
+                                                <div class="invalid-feedback">
+                                                    <strong>{{ $message }}</strong>
+                                                </div>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -122,7 +127,7 @@
                                     <tbody>
                                         @foreach ($siswas as $siswa)
                                             <tr>
-                                                <td><a href="" id="swal" class="btn btn-info btn-sm">Pdf</a></td>
+                                                <td><a href="#" class="btn btn-info btn-sm">Pdf</a></td>
                                                 <td>{{ $siswa->nis }}</td>
                                                 <td>{{ $siswa->nama }}</td>
                                                 <td>{{ $siswa->GenderDefinition }}</td>
@@ -134,16 +139,6 @@
                                             </tr>
                                         @endforeach
                                     </tbody>
-                                    <script>
-                                        const swal = document.querySelector('#swal');
-                                        swal.addEventListener('click', function(){
-                                            Swal.fire(
-                                                'The Internet?',
-                                                'That thing is still around?',
-                                                'question'
-                                            )
-                                        });
-                                    </script>
                                 </table>
                             </div>
                         </div>
