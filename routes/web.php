@@ -9,8 +9,10 @@ Route::middleware('guest')->group(function(){
         Route::get('/daftar/siswa', 'DaftarController@index')->name('daftar');
         Route::post('/daftar/store', 'DaftarController@store')->name('store');
     });
+    Route::get('/admin/login', function () {
+        return view('auth.login');
+    });
 });
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
