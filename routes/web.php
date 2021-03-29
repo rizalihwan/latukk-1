@@ -13,6 +13,6 @@ Route::middleware('guest')->group(function(){
         return view('auth.login');
     });
 });
-
+Route::get('/{id}/pdf_siswa', 'DaftarController@pdf')->name('siswa.pdf');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

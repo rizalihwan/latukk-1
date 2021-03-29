@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use PDF;
 use App\Siswa;
 
 class DaftarController extends Controller
@@ -31,5 +31,12 @@ class DaftarController extends Controller
         Siswa::create($attr);
         toast('Berhasil Daftar','success');
         return back();
+    }
+
+    public function pdf($id)
+    {
+        $siswa = Siswa::findOrFail($id);
+        $pdf = PDF::loadview('pdf_siswa', ['siswa' => $siswa]);
+    	return $pdf->stream();
     }
 }
