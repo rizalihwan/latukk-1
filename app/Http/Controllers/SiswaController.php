@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Siswa;
 use Illuminate\Http\Request;
 
 class SiswaController extends Controller
@@ -13,7 +14,9 @@ class SiswaController extends Controller
      */
     public function index()
     {
-        return view('admin.siswa.index');
+        return view('admin.siswa.index', [
+            'siswas' => Siswa::get()
+        ]);
     }
 
     /**

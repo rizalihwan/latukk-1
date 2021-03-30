@@ -27,7 +27,7 @@
     </div>
 
     <!-- Nav Item - Charts -->
-    <li class="nav-item">
+    <li class="nav-item {{ request()->is('index/siswa/admin') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('admin.siswa.index') }}">
             <i class="fas fa-fw fa-users"></i>
             <span>Data Siswa</span></a>
