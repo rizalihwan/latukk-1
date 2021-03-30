@@ -12,7 +12,10 @@ Route::middleware('guest')->group(function(){
     Route::get('/admin/login', function () {
         return view('auth.login');
     });
+});        
+Route::middleware('auth')->group(function(){
+    Route::get('/index/siswa/admin', 'SiswaController@index')->name('admin.siswa.index');
+    Route::get('/home', 'HomeController@index')->name('home');
 });
 Route::get('/{id}/pdf_siswa', 'DaftarController@pdf')->name('siswa.pdf');
-Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes(); 
